@@ -1,0 +1,98 @@
+{
+  "records": {
+    "ships": [
+    {
+      "id": 1111,
+      "productName": "Coxinha Simples",
+      "price": 40
+    },
+    {
+      "id": 1112,
+      "productName": "Bolinha de Queijo",
+      "price": 40
+    },
+    {
+      "id": 1113,
+      "productName": "Enfirra de Carne",
+      "price": 40
+    },
+    {
+      "id": 1114,
+      "productName": "Enfirra de Frango",
+      "price": 40
+    },
+    {
+      "id": 1115,
+      "productName": "Pastel de Carne",
+      "price": 40
+    },
+    {
+      "id": 1116,
+      "productName": "Pastel de Frango",
+      "price": 40
+    },
+    {
+      "id": 1117,
+      "productName": "Salsicha Frita",
+      "price": 40
+    },
+    {
+      "id": 1118,
+      "productName": "Salsicha Assada",
+      "price": 40
+    },
+    {
+      "id": 1119,
+      "productName": "Risoli de Milho",
+      "price": 40
+    },
+    {
+      "id": 1120,
+      "productName": "Risoli de Carne",
+      "price": 40
+    },
+    {
+      "id": 1121,
+      "productName": "Risoli de P/M",
+      "price": 40
+    },
+    {
+      "id": 1122,
+      "productName": "Espetinho",
+      "price": 40
+    },
+    {
+      "id": 1123,
+      "productName": "Pão Pizza",
+      "price": 40
+    },
+    {
+      "id": 1124,
+      "productName": "Kibe",
+      "price": 40
+    }
+  ],
+    "soda": [
+      {
+        "id": 1125,
+        "productName": "Coca-Cola 2lts",
+        "price": 1000
+      },
+      {
+        "id": 1126,
+        "productName": "Guaraná 2lts",
+        "price": 1000
+      },
+      {
+        "id": 1127,
+        "productName": "Fanta Laranja 1.5lts",
+        "price": 1000
+      },
+      {
+        "id": 1128,
+        "productName": "Fanta Guaraná 1.5lts",
+        "price": 1000
+      }
+    ]
+  }
+}

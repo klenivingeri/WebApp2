@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import { WishlistContextProvider } from './client/context/whishilist.context';
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <WishlistContextProvider>
+      <App />
+    </WishlistContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
