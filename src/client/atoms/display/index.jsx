@@ -6,12 +6,12 @@ import { WishlistContext } from '../../context/whishilist.context'
 
 const Display = ({ item }) => {
   const { addItem, removeCar } = useContext(WishlistContext)
-  const remove = (id) => {
-    removeCar(id)
+  const remove = (id, type) => {
+    removeCar(id, type)
   }
 
-  const add = (id) => {
-    addItem(id)
+  const add = (id, type) => {
+    addItem(id, type)
   }
   return (
     <Box sx={{
@@ -19,7 +19,7 @@ const Display = ({ item }) => {
       flexDirection: 'row',
       alignItems: 'center',
     }}>
-      <RemoveCircleOutlineIcon fontSize="large" onClick={() => remove(item.id)} />
+      <RemoveCircleOutlineIcon fontSize="large" onClick={() => remove(item.id, item.type)} />
       <Box sx={{
         width: '68px',
         margin: '0 0 0 -2px',
@@ -28,7 +28,7 @@ const Display = ({ item }) => {
       }}>
         {item.quantity}
       </Box>
-      <AddCircleOutlineIcon fontSize="large" onClick={() => add(item.id)} />
+      <AddCircleOutlineIcon fontSize="large" onClick={() => add(item.id, item.type)} />
     </Box>
   )
 }

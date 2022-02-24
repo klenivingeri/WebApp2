@@ -7,10 +7,12 @@ export const WishlistContextProvider = ({ children, ...rest }) => {
 
   const [recordsCar, setRecordsCar] = useState(records.orders)
   let carrinho = []
-  function addItem(id) {
+  function addItem(id, type) {
+    console.log(type)
+    const quant = type === "ships" ? 25 : 1
     const orders = recordsCar.map((order) => {
       if (order.id === id) {
-        const quantity = (order.quantity + 25)
+        const quantity = (order.quantity + quant)
         const total = (quantity * order.price)
         return {
           ...order,
@@ -23,10 +25,11 @@ export const WishlistContextProvider = ({ children, ...rest }) => {
     setRecordsCar(orders)
   }
 
-  function removeCar(id) {
+  function removeCar(id, type) {
+    const quant = type === "ships" ? 25 : 1
     const orders = recordsCar.map((order) => {
       if (order.id === id) {
-        const quantity = order.quantity !== 0 ? (order.quantity - 25) : 0
+        const quantity = order.quantity !== 0 ? (order.quantity - quant) : 0
         const total = (quantity * order.price)
         return {
           ...order,
