@@ -21,12 +21,14 @@ const MyHeader = styled('div')({
 })
 
 const Header = () => {
-  const { totalCar } = useContext(WishlistContext);
+  const { recordsCar } = useContext(WishlistContext);
+  const getTotal = (total, item) => total + item.total
+  const total = recordsCar.reduce(getTotal, 0);
 
   return (
   <MyHeader>
     <Box>Salgados para festa:</Box>
-    <Box>{ currency(totalCar) }</Box>
+    <Box>{ currency(total) }</Box>
     <Cart />
   </MyHeader>)
 }

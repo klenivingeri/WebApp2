@@ -1,12 +1,19 @@
-import AllProductList from '../../../api/AllProductList.json'
-import Container from '../../organisms/container'
-import OrderList from '../../organisms/orderList'
-const { records } = AllProductList
+import React, { useContext } from 'react';
+import Container from '../../organisms/container';
+import OrderList from '../../organisms/orderList';
+import { WishlistContext } from '../../context/whishilist.context';
 
 const Sodas = () => {
+  const { recordsCar } = useContext(WishlistContext);
+  const soda = recordsCar.filter((order) => { 
+    if(order.type === 'soda'){
+      return order
+    }
+  })
+
   return (
     <Container>
-      <OrderList orders={records.soda} />
+      <OrderList orders={soda} />
     </Container>
   )
 }
