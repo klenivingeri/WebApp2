@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Pages from './routes-pages';
 import { BrowserRouter } from 'react-router-dom';
 import Header from './client/organisms/header'
@@ -7,10 +7,12 @@ import Home from './client/pages/Home'
 
 function App() {
   const [status, setStatus] = useState(true)
-  setTimeout(() => {
-    console.log('teste')
-    setStatus(false)
-  }, 2000);
+  useEffect(() => {
+    setTimeout(() => {
+      console.log('teste')
+      setStatus(false)
+    }, 2000);
+  }, [])
   return (
     <BrowserRouter>
       <div className="App" >

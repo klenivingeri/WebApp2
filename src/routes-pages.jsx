@@ -7,9 +7,10 @@ import Form from './client/pages/Form';
 const Pages = () => {
   return (
     <Routes>
-      <Route path="/page/Ships" exact="true" element={<Ships/>} />
+      <Route path="/" exact="true" element={<Ships/>} />
+      <Route path="/page/Ships" element={<Ships/>} />
       <Route path="/page/Sodas" element={<Sodas/>} />
-      <Route path="/page/Checkout" element={<Checkout />} />
+      <Route path="/page/Checkout" element={<Form />} />
       <Route path="/page/Form" element={<Form />} />
     </Routes>
   )

@@ -1,7 +1,7 @@
 import React from 'react';
 import { styled } from '@mui/system'
 import logo from '../../../assets/logo.png';
-import CircularProgressWithLabel from '../../molecules/loadding'
+import CircularIndeterminate from '../../molecules/loadding'
 
 const Loadding = styled('div')({
   padding: '10px 0px',
@@ -23,7 +23,7 @@ const Home = () => {
 return (<>
   <Loadding >
     <img src={logo}/> 
-  <CircularProgressWithLabel />
+  <CircularIndeterminate />
   </Loadding>
 </>)
 }
